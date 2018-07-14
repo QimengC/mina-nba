@@ -1,0 +1,34 @@
+<view class='container'>
+  
+  <view class='me-head'>
+    <view>
+      <view class='name'>程起蒙</view>
+      <view class='text-second'>安卓开发工程师</view>
+    </view>
+    <image class='avatar' src='/image/android.png'/>
+  </view>
+  <view class='line'/>
+  <view class='me-item'>
+    <image class='icon' src='/image/email.png'/>
+    <text class='text-second'>lemonforwork@163.com</text>
+  </view>
+  <view class='line'/>
+  <view class='me-item'>
+    <image class='icon' src='/image/github.png'/>
+    <text class='text-second'>https://github.com/cayman</text>
+  </view>
+  <view class='line'/>
+  <view class='me-item'>
+    <image class='icon' src='/image/contact.png'/>
+    <text class='text-second'>QQ/WeChat: 247927025</text>
+  </view>
+  <view class='line'/>
+
+  <text class='project-title'> 关于项目：</text>
+  <text class='project-url'>项目地址：https://github.com/cayman/mina-nba</text>
+  <text class='project-url'>原项目：https://ecitlm.github.io/wx-nba/ </text>
+  <text class='project-content'>· 本人的个人练手项目，大部分代码都是参考上面的原项目，感谢作者的开源</text>
+  <text class='project-content'>· 项目中大部分代码都是使用原生的微信官方的API,你可以在小程序API中找到所有的实现方式</text>
+  <text class='project-content'>· 新手向 代码可能不严谨，仅供参考</text>
+  <text class='project-content'>· 交个朋友吧~</text>
+</view>

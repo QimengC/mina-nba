@@ -1,0 +1,32 @@
+.rank {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rank-head {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+
+.rank-text {
+  display: block;
+  width: 20%;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.rank-text-left {
+  display: block;
+  width: 20%;
+  text-align: center;
+  font-size: 28rpx;
+  float: left;
+}

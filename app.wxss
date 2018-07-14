@@ -1,0 +1,77 @@
+/**app.wxss**/
+@import '/pages/common/weui.wxss';
+/*垂直布局 左对齐  */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: left; */
+  /* padding: 0rpx 0; */
+  box-sizing: border-box;
+  font-size: 32rpx;
+} 
+
+.grey {
+  color: #E8E8E8
+}
+
+.blue-light {
+  color: #00AA98
+}
+
+.icon-normal {
+  width: 32rpx;
+  height: 32rpx;
+}
+.icon-48 {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  border: 1rpx solid #eee;
+}
+
+.icon-big {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.icon-special {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.line {
+  height: 2rpx;
+  width: 690rpx;
+  background-color: #D8D8D8;
+}
+
+.text-light {
+  font-size: 28rpx;
+  color: grey;
+}
+
+.no-data {
+    padding: 100rpx 30rpx;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 28rpx;
+}
+
+.icon-nothing {
+    background: url(https://coding.it919.cn/static/images/no-data.png) center no-repeat;
+    width: 120rpx;
+    height: 120rpx;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+}

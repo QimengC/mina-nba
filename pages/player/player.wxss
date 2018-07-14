@@ -1,0 +1,93 @@
+/* pages/player/player.wxss */
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-player {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+}
+
+.header-player-avater {
+  width: 260rpx;
+  height: 190rpx;
+}
+
+.header-player-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+}
+
+.header-data {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: grey;
+  box-sizing: border-box;
+}
+
+.header-data-item {
+  display: block;
+  width: 25%;
+  text-align: center;
+  border-right: 2rpx solid #d8d8d8;
+  border-top: 2rpx solid #d8d8d8;
+}
+
+.base-data {
+  width: 100%;
+}
+
+.data-title {
+  width: 100%;
+  background: #F5F5F5;
+  text-align: left;
+  padding: 20rpx 30rpx; 
+  box-sizing: border-box;
+}
+
+.data-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.data-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.season-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.season-item {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #d8d8d8;
+}

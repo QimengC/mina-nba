@@ -1,0 +1,57 @@
+<view class='container'>
+  <view style='width:100%' class="weui-tab">
+    <!--navbar  -->
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!--navbar end  -->
+    <!--rank  -->
+    <view class="weui-tab__panel">
+      <!--rank west -->
+      <view class="rank" hidden="{{activeIndex != 0}}">
+        <view style='background-color: #e8e8e8' class='rank-head'>
+          <text class='rank-text-left'>球队</text>
+          <text class='rank-text'>胜场</text>
+          <text class='rank-text'>负场</text>
+          <text class='rank-text'>胜率</text>
+          <text class='rank-text'>场均差</text>
+        </view>
+        <view class='rank-list' wx:for='{{list.west}}' wx:for-item='item' wx:key='key1'>
+          <view class='rank-head'>
+            <text class='rank-text-left' id="{{item.teamId}}">{{index+1}}.{{item.name}}</text>
+            <text class='rank-text'>{{item.wins}}</text>
+            <text class='rank-text'>{{item.losses}}</text>
+            <text class='rank-text'>{{item['wining-percentage']}}%</text>
+            <text class='rank-text'>{{item['games-back'] }}</text>
+          </view>
+        </view>
+      </view>
+      <!--rank west end  -->
+      <!--rank east -->
+      <view class="rank" hidden="{{activeIndex != 1}}">
+                <view style='background-color: #e8e8e8' class='rank-head'>
+          <text class='rank-text-left'>球队</text>
+          <text class='rank-text'>胜场</text>
+          <text class='rank-text'>负场</text>
+          <text class='rank-text'>胜率</text>
+          <text class='rank-text'>场均差</text>
+        </view>
+        <view class='rank-list' wx:for='{{list.east}}' wx:for-item='item' wx:key='key1'>
+          <view class='rank-head'>
+            <text class='rank-text-left' id="{{item.teamId}}">{{index+1}}.{{item.name}}</text>
+            <text class='rank-text'>{{item.wins}}</text>
+            <text class='rank-text'>{{item.losses}}</text>
+            <text class='rank-text'>{{item['wining-percentage']}}%</text>
+            <text class='rank-text'>{{item['games-back'] }}</text>
+          </view>
+        </view>
+      </view>
+      <!--rank east end  -->
+    </view>
+  </view>
+</view>

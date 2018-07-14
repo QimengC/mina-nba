@@ -1,0 +1,59 @@
+/**index.wxss**/
+.date-area {
+  width: 100%;
+  min-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rpx 100rpx;
+  box-sizing: border-box;
+  align-items: center;
+  background: #e8e8e8
+}
+
+.match-list {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+/*每场比赛的信息  */
+.match-item {
+  height: 220rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: 10rpx 20rpx;
+  border-bottom: 1rpx solid #eee;  
+}
+
+.match-item-main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.match-item-title {
+  font-size: 24rpx;
+  justify-content: flex-start;
+}
+
+.match-team {
+  width: 140rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.match-time {
+  width: 160rpx;
+  font-size: 36rpx;
+}

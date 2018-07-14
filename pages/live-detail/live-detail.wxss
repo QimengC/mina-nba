@@ -1,0 +1,159 @@
+.live-header {
+  height:auto;
+  width: 100%;
+  background: url('http://cdn.it919.cn/bg.png') no-repeat;
+  background-size: cover;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.live-header-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.live-header-vote {
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  padding: 5rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.bar-red {
+  height: 10rpx;
+  background: red;
+}
+
+.bar-blue {
+  height: 10rpx;
+  background: blue;
+}
+
+.icon-128 {
+  width: 128rpx;
+  height: 128rpx;
+}
+
+.tab-area {
+  width: 100%;
+  height: 100%;
+}
+
+.live-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5rpx 30rpx;
+  border-bottom: 1rpx solid #eee; 
+}
+
+.live-item-header {
+  width: 100%;
+  display: flex;
+  height: 60rpx;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.quater {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 28rpx;
+  align-items: center;
+}
+
+.quater-item {
+  width: 500rpx;
+  height: 60rpx;
+}
+
+.image-quater {
+  width: 125rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.text-quater {
+  display: flex;
+  height: 60rpx;
+  flex-direction: row;
+  width: 125rpx;
+  font-size: 28rpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-player-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 120rpx;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 0 100rpx;
+}
+
+.top-player-area {
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+}
+
+.top-player-title {
+  width: 30%;
+  display: block;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.top-player-item-area {
+  width: 30%;
+  display: block;
+  text-align: center;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  color: green;
+}
+
+.top-player-item {
+  width: 250rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+

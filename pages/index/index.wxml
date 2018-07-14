@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='date-area'>
+    <image class='icon-normal' src='../../image/previous.png' data-date='{{list.pre_date}}' bindtap='selectData'/>
+      <picker mode="date" value="{{date}}" start="2017-10-01" end="2018-09-01" bindchange="dateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    <image class='icon-normal' src='../../image/next.png' data-date='{{list.next_date}}' bindtap='selectData'/>
+  </view>
+
+  <view wx:if="{{list.list}}" class='match-list'>
+    <view wx:for='{{list.list}}' wx:for-item='list' wx:key='k1'>
+      <view class='match-item' bindtap='matchClick' data-liveid='{{list.liveid}}'  data-chid='{{list.schid}}'>
+        <!--具体对阵和比分  -->
+        <view class='match-item-main'>
+          <view class='match-team'>
+            <image src='{{list.hometeamlogo}}' class='icon-special'/>
+            <text>{{list.hometeamname}}</text>
+          </view>
+          <text style='font-size:40rpx'>{{list.homescore}}</text>
+          <!--            状态              比赛时间       比赛开始时间  -->
+          <!-- 还没开始 ： match_status:""  match_time:""  time:"08：00"-->
+          <!-- 正在比赛 ： match_status:"第四节"  match_time:"05:29"  time:"08:30"-->
+          <!-- 比赛结束 ： match_status:"已结束"  match_time:""       time:"06:00" -->
+          <text>{{list.match_status || list.time}}\n{{list.match_time}}</text> 
+          <text style='font-size:40rpx'>{{list.visitscore}}</text>
+          <view class='match-team'>
+            <image src='{{list.visitteamlogo}}' class='icon-special'/>
+            <text>{{list.visitteamname}}</text>
+          </view>
+        </view>
+        <!--比赛结束后媒体报道的标题 当报道还没有数据的时候不显示  -->
+        <view class='match-item-title' wx:if= '{{list.title}}'>
+          <text style='background:green;color:white;margin-right:20rpx;padding:5rpx'>战报</text> 
+          <text style='background:white'>{{list.title}}</text>
+        </view>
+      </view>
+    </view>  
+  </view>
+  <view wx:if="{{list.list.length == 0}}" class='no-data'>
+    <view class='icon-nothing'></view>
+    今日无比赛
+  </view>
+</view>

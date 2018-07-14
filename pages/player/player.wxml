@@ -1,0 +1,116 @@
+<view class='container'>
+  <!--Main Data Start -->
+  <view class='header'>
+    <view class='header-player'>
+      <image class='header-player-avater' src='{{list.portrait}}'/>
+      <view class='header-player-info'>
+        <text style='font-weight: bold;font-size:32rpx'>{{list.cnname}}</text>
+        <text style='font-size:28rpx;margin-top:30rpx'>{{list.position}}({{list.number}})/{{list.teamname}}</text>
+      </view>
+    </view>
+    <view class='header-data'>
+      <view class='header-data-item'>
+        <view style='font-size:32rpx;color:black'>{{list.pointsPG}}</view> \n 得分
+      </view>
+      <view class='header-data-item'>
+        <view style='font-size:32rpx;color:black'>{{list.reboundsPG}}</view> \n 篮板
+      </view>
+      <view class='header-data-item'>
+        <view style='font-size:32rpx;color:black'>{{list.assistsPG}}</view> \n 助攻
+      </view>
+      <view class='header-data-item'>
+        <view style='font-size:32rpx;color:black'>{{list.stealsPG}}</view> \n 抢断
+      </view>
+    </view>
+  </view>
+  <!--Main Data End  -->
+  <!--Player Info Start -->
+  <view class='base-data'>
+    <view class='data-title'>
+      <text>基本信息</text>
+    </view>
+    
+    <view class='data-detail'>
+      <view class='data-item'>
+        <text style='font-size:28rpx;color:grey'>生日</text>
+        <text style='font-size:28rpx'>{{list.birthdate}}</text>
+      </view>
+      <view class='data-item'>
+        <text style='font-size:28rpx;color:grey'>出生地</text>
+        <text style='font-size:28rpx'>{{list.birthplace}}</text>
+      </view>
+    </view>
+    <view class='line' style='margin-left:30rpx'/>
+    <view class='data-detail'>
+      <view class='data-item'>
+        <text style='font-size:28rpx;color:grey'>薪金</text>
+        <text style='font-size:28rpx'>{{list.yearsalary}}</text>
+      </view>
+      <view class='data-item'>
+        <text style='font-size:28rpx;color:grey'>身高/体重</text>
+        <text style='font-size:28rpx'>{{list.height}}/{{list.weight}}</text>
+      </view>
+    </view>
+    <view class='line'style='margin-left:30rpx'/>
+    <view class='data-detail'>
+      <view class='data-item' style='width:100%'>
+        <text style='font-size:28rpx;color:grey'>选秀</text>
+        <text style='font-size:28rpx'>{{list.showing}}</text>
+      </view>
+    </view>
+
+  </view>
+  <!--Player Info End  -->
+  <!--Season Data  -->
+  <view class='base-data'>
+    <view class='data-title'>
+      <text>赛季数据</text>
+    </view>
+    <view class='season-detail'>
+      <view class='season-item'>
+        <text>{{list.games}}</text>
+        <text>出场数</text>
+      </view>
+      <view class='season-item'style='border-right: 2rpx solid #d8d8d8; border-left: 2rpx solid #d8d8d8;'>
+        <text>{{list.gamesStarted}}</text>
+        <text>首发数</text>
+      </view>
+      <view class='season-item'>
+        <text>{{list.minutesPG}}</text>
+        <text>出厂时间</text>
+      </view>
+    </view>
+
+    <view class='season-detail'>
+      <view class='season-item'>
+        <text>{{list.fgPCT}}</text>
+        <text>投篮</text>
+      </view>
+      <view class='season-item' style='border-right: 2rpx solid #d8d8d8; border-left: 2rpx solid #d8d8d8;'>
+        <text>{{list.threesPCT}}</text>
+        <text>三分</text>
+      </view>
+      <view class='season-item'>
+        <text>{{list.ftPCT}}</text>
+        <text>罚球</text>
+      </view>
+    </view>
+
+    <view class='season-detail'>
+      <view class='season-item'>
+        <text>{{list.offensiveReboundsPG}}</text>
+        <text>前篮板</text>
+      </view>
+      <view class='season-item' style='border-right: 2rpx solid #d8d8d8; border-left: 2rpx solid #d8d8d8;'>
+        <text>{{list.defensiveReboundsPG}}</text>
+        <text>后篮板</text>
+      </view>
+      <view class='season-item'>
+        <text>{{list.stealsPG}}</text>
+        <text>抢断</text>
+      </view>
+    </view>
+
+  </view>
+  <!--Season Data End  -->
+</view>

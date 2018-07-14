@@ -1,0 +1,32 @@
+<view class='container'>
+  <!--顶部不同的项目 GridLayout  -->
+  <view class='header'>
+    <text class="{{current=='pt' ? 'active' : 'active-no'}}" data-t='pt' data-name='得分' bindtap='tabNav'>得分</text>
+    <text class="{{current=='rb' ? 'active' : 'active-no'}}" data-t='rb' data-name='篮板' bindtap='tabNav'>篮板</text>
+    <text class="{{current=='at' ? 'active' : 'active-no'}}" data-t='at' data-name='助攻' bindtap='tabNav'>助攻</text>
+    <text class="{{current=='st' ? 'active' : 'active-no'}}" data-t='st' data-name='抢断' bindtap='tabNav'>抢断</text>
+    <text class="{{current=='bk' ? 'active' : 'active-no'}}" data-t='bk' data-name='盖帽' bindtap='tabNav'>盖帽</text>
+    <text class="{{current=='to' ? 'active' : 'active-no'}}" data-t='to' data-name='失误' bindtap='tabNav'>失误</text>
+    <text class="{{current=='tp' ? 'active' : 'active-no'}}" data-t='tp' data-name='三分' bindtap='tabNav'>三分</text>
+    <text class="{{current=='fo' ? 'active' : 'active-no'}}" data-t='fo' data-name='犯规' bindtap='tabNav'>犯规</text>
+    <text class="{{current=='ftp' ? 'active' :'active-no'}}" data-t='ftp' data-name='罚球' bindtap='tabNav'>罚球</text>
+    <text class="{{current=='sht' ? 'active' :'active-no'}}" data-t='sht' data-name='神投' bindtap='tabNav'>神投</text>
+  </view>
+  <!--head end  -->
+  <!--Data Rank -->
+  <view class='content'>
+    <view class='content-head'>
+      <text class='content-head-center'>球员</text>
+      <text class='content-head-text'>场均{{name}}</text>
+      <text class='content-head-text'>总{{name}}</text>
+    </view>
+    <view class='content-list' wx:for='{{stats.record}}' wx:for-item='item' wx:key='key1'>
+      <view class='content-item' style="background: {{index%2 == 0 ? 'wwhite' : '#f5f5f5'}}" bindtap='itemClick' data-playerid='{{item.playerid}}'>
+        <text class='content-head-center'>{{index+1}}.{{item.playername}}</text>
+        <text class='content-head-text'>{{item.avgdata}}</text>
+        <text class='content-head-text'>{{item.totaldata}}</text>
+      </view>
+    </view>
+  </view>
+  <!--Data Rank End  -->
+</view>

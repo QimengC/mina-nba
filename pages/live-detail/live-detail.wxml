@@ -1,0 +1,132 @@
+<view class='container'>
+  <view class='live-header'>
+    <view class='live-header-content'>
+      <view class='content-item'>
+        <image class='icon-128' src='{{matchInfo.t1_icon}}' />
+        <text style='color:white'>{{matchInfo.t1_name}}</text>
+      </view>
+      <view class='content-item'>
+        <text style='color:white'>{{matchInfo.match_status}}{{matchInfo.match_time}}</text>
+        <text style='color:white;margin-top:30rpx'>{{matchInfo.t1_point}} : {{matchInfo.t2_point}}</text>
+      </view>
+      <view class='content-item'>
+        <image class='icon-128' src='{{matchInfo.t2_icon}}' />
+        <text style='color:white'>{{matchInfo.t2_name}}</text>
+      </view>
+    </view>
+    <view class='live-header-vote' style='margin-top:30rpx'>
+      <view class='bar-red' style="width: {{matchInfo.circleVoteNumLeft*100/(matchInfo.circleVoteNumLeft+matchInfo.circleVoteNumRight)}}%" />
+      <view class='bar-blue' style="width: {{matchInfo.circleVoteNumRight*100/(matchInfo.circleVoteNumLeft+matchInfo.circleVoteNumRight)}}%" />
+    </view>
+    <view class='live-header-vote'>
+      <text style='color:white'>{{matchInfo.circleVoteNumLeft}}</text>
+      <text style='color:white'>{{matchInfo.circleVoteNumRight}}</text>
+    </view>
+  </view>
+
+  <!--tab  -->
+  <view class='tab-area'>
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <!-- tab 0  -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class='list' wx:for='{{content}}' wx:for-item='item' wx:key="key1">
+            <view class='live-item'>
+              <view class='live-item-header'>
+                <image class='icon-normal' src='{{item.speaker_data.icon}}' />
+                <text style='color:blue;margin:0 20rpx'>{{item.speaker}}</text>
+                <text>{{item.time}}</text>
+                <view style='flex-grow:2' />
+                <text>{{item.suffix}}</text>
+              </view>
+              <text style='text-align:left'>{{item.content}}</text>
+            </view>
+          </view>
+
+        </view>
+        <!--tab1  -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">暂无数据</view>
+        <!--tab2  -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view wx-if='statistics.topplayer.home'>
+
+            <text>实时赛况</text>
+            <view class='quater' style='justify-content:space-around;background: #eee;'>
+              <text>球队</text>
+              <text>1节</text>
+              <text>2节</text>
+              <text>3节</text>
+              <text>4节</text>
+              <text>总分</text>
+            </view>
+            <view class='quater'>
+              <view class='image-quater'>
+                <image class="icon-big" src='{{matchInfo.t1_icon}}' />
+              </view>
+              <view class='quater-item' wx:for='{{matchInfo.sec_scores}}' wx:for-item='item' wx:key='key2'>
+                <text class='text-quater'>{{item.score1 || '0'}}</text>
+              </view>
+              <text class='text-quater' style='flex-shrink: 0'>{{matchInfo.t1_point}}</text>
+            </view>
+            <view class='line' style='margin-left:30rpx'></view>
+            <view class='quater'>
+              <view class='image-quater'>
+                <image class="icon-big" src='{{matchInfo.t2_icon}}' />
+              </view>
+              <view class='quater-item' wx:for='{{matchInfo.sec_scores}}' wx:for-item='item' wx:key='key3'>
+                <text class='text-quater'>{{item.score2 || '0'}}</text>
+              </view>
+              <text class='text-quater' style='flex-shrink: 0'>{{matchInfo.t2_point}}</text>
+            </view>
+            <view class='line' style='margin-left:30rpx'></view>
+
+            <!--最佳球员  -->
+            <!--标题  -->
+            <view class='top-player-header'>
+              <text>{{matchInfo.t1_name}}</text>
+              <text>最佳球员</text>
+              <text>{{matchInfo.t2_name}}</text>
+            </view>
+            <!--数据  -->
+
+             <!-- <view class='top-player-area' wx-if='{{statistics.topplayer}}'> -->
+              <!--客队  -->
+              <!-- <view class='top-player-item-area' wx:for='{{statistics.topplayer.visit}}' wx:for-item='data' wx:key='key4'> -->
+                <!-- <view class='top-player-item'> -->
+                  <!-- <text>{{data.name}}</text> -->
+                  <!-- <text>{{data.value}}</text> -->
+                <!-- </view> -->
+              <!-- </view> -->
+              <!--项目  -->
+              <!-- <view class='top-player-title'> -->
+                <!-- <text>得分</text> -->
+                <!-- <text>篮板</text> -->
+                <!-- <text>助攻</text> -->
+                <!-- <text>抢断</text> -->
+                <!-- <text>盖帽</text> -->
+                <!-- <text>犯规</text> -->
+                <!-- <text>失误</text> -->
+              <!-- </view> -->
+              <!--主队  -->
+              <!-- <view class='top-player-item-area' wx:for='{{statistics.topplayer.home}}' wx:for-item='data' wx:key='key4'> -->
+                <!-- <view class='top-player-item'> -->
+                  <!-- <text>{{data.name}}</text> -->
+                  <!-- <text>{{data.value}}</text> -->
+                <!-- </view> -->
+              <!-- </view> -->
+            <!-- </view>  -->
+            <!--最佳球员结束  -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

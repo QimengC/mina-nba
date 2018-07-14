@@ -1,0 +1,42 @@
+<view class='container'>
+  <!--新闻标题  -->
+  <view class='header'>
+    <text class='title'>{{item.title}}</text>
+    <text style='font-size:24rpx;color:#888888;margin-top:5rpx;'>{{item.ptime}}</text>
+    <view class='line' style='margin-top:10rpx;'/>
+  </view>
+  <!--新闻标题结束  -->
+  
+  <!--新闻内容  -->
+  <import src='../wxParse/wxParse.wxml'/>
+  <view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <!--新闻内容结束  -->
+  <view style='height:30rpx;width:100%;background-color:#eeeeee'/>
+  <!--评论 -->
+  <view class='comment' wx:if="{{comments.length !== 0}}" >
+    <view class='comment-title'>
+      <view class='title-bg'/>
+      <text style='font-size:32rpx;margin-left:20rpx'>评论</text>
+    </view>
+    <view wx:for='{{comments}}' wx:for-item ='comment' wx:key='key1'>
+      <view class='comment-item'>
+        <!--头像  -->
+        <view class='comment-avater'>
+          <image background-size="cover" class='icon-48' src='{{comment.user.avatar}}'/>
+        </view>
+        <!--内容  -->
+        <view class='comment-text'>
+          <text style='color:blue;font-size:30rpx'>{{comment.user.nickname}}</text>
+          <text class='text-light'>{{comment.createTime}}</text>
+          <text style='font-size:30rpx;'>{{comment.content}}</text>
+          <text class='text-light'>{{comment.user.location}}{{comment.ip}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!--评论结束 -->
+
+</view>

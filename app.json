@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news-list/news-list",
+    "pages/team-rank/team-rank",
+    "pages/stats/stats",
+    "pages/about/about",
+    "pages/live-detail/live-detail",
+    "pages/news-info/news-info",
+    "pages/player/player"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00AA98",
+    "navigationBarTitleText": "NBA球赛",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#00aa98",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "赛事直播",
+        "iconPath": "image/ball.png",
+        "selectedIconPath": "image/ball-active.png"
+      },
+      {
+        "pagePath": "pages/news-list/news-list",
+        "text": "NBA资讯",
+        "iconPath": "image/news.png",
+        "selectedIconPath": "image/news-active.png"
+      },
+      {
+        "pagePath": "pages/team-rank/team-rank",
+        "text": "球队战绩",
+        "iconPath": "image/rank.png",
+        "selectedIconPath": "image/rank-active.png"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "数据统计",
+        "iconPath": "image/stats.png",
+        "selectedIconPath": "image/stats-active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于我",
+        "iconPath": "image/about.png",
+        "selectedIconPath": "image/about-active.png"
+      }
+    ]
+  }
+}

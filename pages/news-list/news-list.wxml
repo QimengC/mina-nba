@@ -1,0 +1,31 @@
+<view class='container'>
+  <view wx:for='{{list}}' wx:for-item='list' wx:key='key'>
+    <view class='news-item' bindtap='itemClick' data-docid='{{list.docid}}'>
+      <image class='news-item-img' mode='aspectFit' src='{{list.imgsrc}}' />
+      <view class='news-item-content'>
+        <text style='font-size:28rpx;margin-top:10rpx'>{{list.title}}</text>
+        <view class='news-item-time'>
+          <text style='font-size:24rpx;color:#8a8a8a'>{{list.ptime}}</text>
+          <view style='backgroud-color:#555555'>
+            <text>{{list.commentCount}}</text> 
+            <image class='icon-normal'src='/image/comment.png'/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if= '{{isShow}}' class="footer">
+    <!--加载更多  -->
+    <view wx:if='{{isComplete}}' style='display:flex;flex-direction:row;justify-content:center' class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已经到底了</view>
+    </view>
+    <!--complete -->
+    <view wx:else class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+  </view>
+
+
+</view>
